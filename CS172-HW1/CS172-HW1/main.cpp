@@ -8,18 +8,26 @@
 
 #include <iostream>
 #include <ctime>
+#include <cmath>
+
 using namespace std;
 
 void ex02();
+void ex03();
 
 int main() {
     
-    ex02();
+    //ex02();
+    ex03();
     
 }
 
 void ex02(){
+    
+    // Initial variable hasPassedTest to true
     bool hasPassedTest = true;
+    
+    // Assign random number to x and y; Compares the numbers and outputs the greater one
     srand((unsigned int)time(NULL));
     int x = rand();
     int y = rand();
@@ -27,6 +35,8 @@ void ex02(){
         cout << "x is greater than y" << endl;
     else
         cout<< "y is greater than x" << endl;
+    
+    // Takes a user input value and compares it to 100
     int numberofShares;
     cout << "Enter a value: ";
     cin >> numberofShares;
@@ -34,6 +44,8 @@ void ex02(){
         cout << numberofShares << " is less than 100" << endl;
     else
         cout << numberofShares << " is greater than 100" << endl;
+   
+    
     int boxWidth;
     int bookWidth;
     cout << "Enter a box width: ";
@@ -55,4 +67,25 @@ void ex02(){
         shelfLife -= 4;
     cout << "Adjust shelf life to " << shelfLife << "." << endl;
     
+}
+
+void ex03() {
+    int squareArea;
+    cout << "Enter area of a square: ";
+    cin >> squareArea;
+    double length = sqrt(squareArea);
+    double diagonalLength = sqrt(2) * length;
+    cout << "The diagonal length is " << diagonalLength << endl;
+    
+    char response;
+    char y;
+    cout << "Enter yes or no (y or n): ";
+    cin >> response;
+    if(response == y)
+        cout << "Yes" << endl;
+    else
+        cout << "No" << endl;
+    
+    
+
 }
