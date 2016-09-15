@@ -9,6 +9,7 @@
 #include <iostream>
 #include <ctime>
 #include <cmath>
+#include <string>
 
 using namespace std;
 
@@ -78,14 +79,20 @@ void ex03() {
     cout << "The diagonal length is " << diagonalLength << endl;
     
     char response;
-    //char y;
     cout << "Enter yes or no (y or n): ";
     cin >> response;
     if(response == 'y')
-        cout << "Yes" << endl;
+        cout << "Yes";
     else
-        cout << "No" << endl;
-    
-    
+        cout << "No";
+
+	char tab = '\t';
+
+	string mailingAddress;
+	cout << "Enter a your mailing address: " << endl;
+	getline(cin, mailingAddress);
+	
+	string empty = "";
+
 
 }
