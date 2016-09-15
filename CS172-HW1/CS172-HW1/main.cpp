@@ -28,10 +28,31 @@ void ex02(){
     else
         cout<< "y is greater than x" << endl;
     int numberofShares;
-    cout << "Enter a value" << endl;
+    cout << "Enter a value: ";
     cin >> numberofShares;
     if ( numberofShares < 100)
         cout << numberofShares << " is less than 100" << endl;
     else
         cout << numberofShares << " is greater than 100" << endl;
+    int boxWidth;
+    int bookWidth;
+    cout << "Enter a box width: ";
+    cin >> boxWidth;
+    cout << "Enter a book width: ";
+    cin >> bookWidth;
+    if (boxWidth % bookWidth == 0)
+        cout << "Box width is evenly divisible by book width." << endl;
+    else
+        cout << "Box width is not evenly divisilbe by book width." << endl;
+    
+    int shelfLife;
+    int outsideTemp;
+    cout << "Enter the shelf life of chocolate: ";
+    cin >> shelfLife;
+    cout << "Enter the outside temperature: ";
+    cin >> outsideTemp;
+    if(outsideTemp > 90)
+        shelfLife -= 4;
+    cout << "Adjust shelf life to " << shelfLife << "." << endl;
+    
 }
