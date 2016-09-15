@@ -78,10 +78,10 @@ void ex03() {
     cout << "The diagonal length is " << diagonalLength << endl;
     
     char response;
-    char y;
+    //char y;
     cout << "Enter yes or no (y or n): ";
     cin >> response;
-    if(response == y)
+    if(response == 'y')
         cout << "Yes" << endl;
     else
         cout << "No" << endl;
