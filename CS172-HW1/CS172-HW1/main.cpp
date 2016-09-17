@@ -18,7 +18,7 @@ void ex03();
 
 int main() {
     
-    //ex02();
+    ex02();
     ex03();
     
 }
@@ -46,7 +46,7 @@ void ex02(){
     else
         cout << numberofShares << " is greater than 100" << endl;
    
-    
+    // Takes values for box width and book width and tests to see if the box width is evenly divisible by the book width
     int boxWidth;
     int bookWidth;
     cout << "Enter a box width: ";
@@ -66,7 +66,7 @@ void ex02(){
     cin >> outsideTemp;
     if(outsideTemp > 90)
         shelfLife -= 4;
-    cout << "Adjust shelf life to " << shelfLife << "." << endl;
+        cout << "The shelf life is " << shelfLife << "." << endl;
     
 }
 
