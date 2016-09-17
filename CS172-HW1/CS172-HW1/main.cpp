@@ -15,11 +15,13 @@ using namespace std;
 
 void ex02();
 void ex03();
+void ex04();
 
 int main() {
     
-    ex02();
-    ex03();
+    //ex02();
+    //ex03();
+    ex04();
     
 }
 
@@ -58,6 +60,7 @@ void ex02(){
     else
         cout << "Box width is not evenly divisilbe by book width." << endl;
     
+    // Asks for a shelf life and temperature and reduces the shelf life by four if the temperature is greater than ninety.
     int shelfLife;
     int outsideTemp;
     cout << "Enter the shelf life of chocolate: ";
@@ -71,6 +74,8 @@ void ex02(){
 }
 
 void ex03() {
+    
+    // Takes the area of the square returns the length of the diagonal
     double squareArea;
     cout << "Enter area of a square: ";
     cin >> squareArea;
@@ -78,6 +83,7 @@ void ex03() {
     double diagonalLength = sqrt(2) * length;
     cout << "The diagonal length is " << diagonalLength << endl;
     
+    // Takes in a "y" or "n" response and returns the "Yes" for y and "No" for n
     char response;
     cout << "Enter yes or no (y or n): ";
     cin >> response;
@@ -85,9 +91,11 @@ void ex03() {
         cout << "Yes" << endl;
     else
         cout << "No" << endl;
-
+    
+    // Initializes a char variable to tab
 	char tab = '\t';
-
+    
+    // Asks for a mailing address takes in the full line
 	string mailingAddress;
     cin.ignore();
 	cout << "Enter your mailing address: " << endl;
@@ -95,5 +103,8 @@ void ex03() {
 	
 	string empty = "";
 
+}
 
+void ex04() {
+    
 }
