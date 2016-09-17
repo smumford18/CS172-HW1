@@ -71,7 +71,7 @@ void ex02(){
 }
 
 void ex03() {
-    int squareArea;
+    double squareArea;
     cout << "Enter area of a square: ";
     cin >> squareArea;
     double length = sqrt(squareArea);
@@ -82,14 +82,15 @@ void ex03() {
     cout << "Enter yes or no (y or n): ";
     cin >> response;
     if(response == 'y')
-        cout << "Yes";
+        cout << "Yes" << endl;
     else
-        cout << "No";
+        cout << "No" << endl;
 
 	char tab = '\t';
 
 	string mailingAddress;
-	cout << "Enter a your mailing address: " << endl;
+    cin.ignore();
+	cout << "Enter your mailing address: " << endl;
 	getline(cin, mailingAddress);
 	
 	string empty = "";
