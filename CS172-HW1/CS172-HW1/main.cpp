@@ -107,4 +107,18 @@ void ex03() {
 
 void ex04() {
     
+    // Prompts the user for a number and keeps asking until it gets a number between 1 and 10
+    int number;
+    cout << "Enter a value between one and ten: ";
+    while(number > 10 || number < 1)
+                cin >> number;
+    
+    // Sums the cubes from 1 to the number entered above
+    int sum;
+    for(int i = 1; i <= number; i++) {
+        int temp01 = pow( i , 3 );
+        sum += temp01;
+    }
+    cout << sum << endl;
+    
 }
