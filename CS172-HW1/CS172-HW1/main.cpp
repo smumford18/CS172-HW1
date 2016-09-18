@@ -18,13 +18,18 @@ void ex03();
 void ex04();
 int doubleValue(int);
 int add(int, int);
+int addOne(int&);
+void ex05();
+void arrayOut(int[], int);
+void arraySearch(int[], int);
+
 
 int main() {
     
-    //ex02();
-    //ex03();
+    ex02();
+    ex03();
     ex04();
-    
+    ex05();
 }
 
 void ex02(){
@@ -71,7 +76,7 @@ void ex02(){
     cin >> outsideTemp;
     if(outsideTemp > 90)
         shelfLife -= 4;
-        cout << "The shelf life is " << shelfLife << "." << endl;
+        cout << "The shelf life is " << shelfLife << ".\n\n";
     
 }
 
@@ -103,8 +108,11 @@ void ex03() {
 	cout << "Enter your mailing address: " << endl;
 	getline(cin, mailingAddress);
 	
+    // Initializes an empty string variable
 	string empty = "";
-
+    
+    cout << "\n";
+    
 }
 
 void ex04() {
@@ -141,7 +149,7 @@ void ex04() {
     
     // Uses a function to double the number that was input
     int doubled = doubleValue(number);
-    cout << doubled << "\n";
+    cout << "Value doubled is " << doubled << "\n";
     
     // Addes two random numbers with a seperate function
     srand((unsigned int)time(NULL));
@@ -150,6 +158,11 @@ void ex04() {
     int u = add(m, n);
     cout << u << "\n";
     
+    // Addes one a referenced variable
+    int g = number;
+    int y = addOne(g);
+    cout << "Value plus one is " << y << "\n\n";
+
 }
 
 int doubleValue(int l) {
@@ -165,5 +178,76 @@ int add(int m, int n) {
     int o;
     o = m + n;
     return o;
+    
+}
+
+int addOne(int& g) {
+    
+    int temp03;
+    temp03 = g + 1;
+    return temp03;
+    
+}
+
+void ex05() {
+    
+    // Uses a loop to read in 5 integers and puts them in an array
+    int arraySize=5;
+    int stevens[arraySize];
+    cout << "Enter five integers: ";
+    for(int v=1; v < 6; v++) {
+        //int temp04;
+        cin >> stevens[v];
+    }
+    
+    // Finds the sum of the values in the array
+    int sum=0;
+    for(int p=1; p < 6; p++) {
+        int temp05 = stevens[p];
+        sum += temp05;
+    }
+    cout << "Sum: " << sum << "\n";
+    
+    // Finds the product of the values in the array
+    int product=1;
+    for(int q=1; q < 6; q++) {
+        int temp06 = stevens[q];
+        product *= temp06;
+    }
+    cout << "Product: " << product << "\n";
+    
+    // Calls a function that outputs the values in the array
+    arrayOut(stevens, arraySize);
+    
+    // Calls a function that allows the user to enter a value and tests to see if it's in the array
+    arraySearch(stevens, arraySize);
+    
+}
+
+void arrayOut(int array1[], int r) {
+    
+    cout << "Array values: ";
+    for( int e=1; e < r+1; e++) {
+        cout << array1[e] << " ";
+    }
+    cout << "\n";
+    
+}
+
+void arraySearch(int array3[], int t) {
+    
+    cout << "Enter a value: ";
+    int test;
+    bool tester = false;
+    cin >> test;
+    for(int h=1; h <= t; h++) {
+        if(test == array3[h]) {
+            tester = true;
+        }
+    }
+    if(tester == false)
+        cout << test << " is not in the array.\n\n";
+    else
+        cout << test << " is in the array.\n\n";
     
 }
