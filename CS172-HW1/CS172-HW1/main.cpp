@@ -121,4 +121,20 @@ void ex04() {
     }
     cout << sum << endl;
     
+    // Outputs the number of asterisks equal to the value entered
+    int j=1;
+    do{
+        cout << "*";
+        j++;
+    } while (j <= number);
+    cout << "\n";
+    
+    // Outputs the even integers from 2 to 40.
+    int temp02;
+    for(int k = 1; k <= 20; k++) {
+        temp02 = 2 * k;
+        cout << temp02 << " ";
+    }
+    cout << "\n";
+    
 }
