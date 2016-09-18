@@ -16,6 +16,8 @@ using namespace std;
 void ex02();
 void ex03();
 void ex04();
+int doubleValue(int);
+int add(int, int);
 
 int main() {
     
@@ -136,5 +138,32 @@ void ex04() {
         cout << temp02 << " ";
     }
     cout << "\n";
+    
+    // Uses a function to double the number that was input
+    int doubled = doubleValue(number);
+    cout << doubled << "\n";
+    
+    // Addes two random numbers with a seperate function
+    srand((unsigned int)time(NULL));
+    int m = rand() % (100 - 0);
+    int n = rand() % (100 - 0);
+    int u = add(m, n);
+    cout << u << "\n";
+    
+}
+
+int doubleValue(int l) {
+    
+    int z;
+    z= 2* l;
+    return z;
+    
+}
+
+int add(int m, int n) {
+    
+    int o;
+    o = m + n;
+    return o;
     
 }
