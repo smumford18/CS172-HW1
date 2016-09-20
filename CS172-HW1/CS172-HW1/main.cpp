@@ -33,6 +33,7 @@ int main() {
     
 }
 
+
 void ex02(){
     
     // Initial variable hasPassedTest to true
@@ -142,7 +143,7 @@ void ex04() {
     
     // Outputs the even integers from 2 to 40.
     int temp02;
-    for(int k = 1; k <= 20; k++) {
+    for(int k = 0; k <= 20; k++) {
         temp02 = 2 * k;
         cout << temp02 << " ";
     }
@@ -160,7 +161,7 @@ void ex04() {
     cout << u << "\n";
     
     // Addes one a referenced variable
-    int g = number;
+    int& g = number;
     int y = addOne(g);
     cout << "Value plus one is " << y << "\n\n";
 
