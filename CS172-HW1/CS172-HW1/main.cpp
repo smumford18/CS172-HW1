@@ -30,6 +30,7 @@ int main() {
     ex03();
     ex04();
     ex05();
+    
 }
 
 void ex02(){
@@ -165,14 +166,16 @@ void ex04() {
 
 }
 
+// Function that doubles the passed in value
 int doubleValue(int l) {
     
     int z;
-    z= 2* l;
+    z= 2 * l;
     return z;
     
 }
 
+// Function that sums the two passed in values
 int add(int m, int n) {
     
     int o;
@@ -181,6 +184,7 @@ int add(int m, int n) {
     
 }
 
+// Function that adds one to a passed in value
 int addOne(int& g) {
     
     int temp03;
@@ -224,6 +228,7 @@ void ex05() {
     
 }
 
+//Function that outputs the values in an array
 void arrayOut(int array1[], int r) {
     
     cout << "Array values: ";
@@ -234,11 +239,12 @@ void arrayOut(int array1[], int r) {
     
 }
 
+// Allows the user to enter a value and checks to see if that value is in the array
 void arraySearch(int array3[], int t) {
     
-    cout << "Enter a value: ";
     int test;
     bool tester = false;
+    cout << "Enter a value: ";
     cin >> test;
     for(int h=1; h <= t; h++) {
         if(test == array3[h]) {
